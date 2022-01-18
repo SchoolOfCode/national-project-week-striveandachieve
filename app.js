@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import logger from "morgan";
 
-import usersRouter from "./routes/moods.js";
+import moodsRouter from "./routes/moods.js";
 
 export const sampleData = [
   { userid: 1,
@@ -39,7 +39,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/users", usersRouter);
+app.use("/moods", moodsRouter);
 
 app.use(function (req, res, next) {
   res
