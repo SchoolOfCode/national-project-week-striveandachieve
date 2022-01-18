@@ -1,9 +1,13 @@
 import { useState } from "react";
 
-function WeekDropDown() {
-  const weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-  const [week, setWeek] = useState(1);
 
+function WeekDropDown() {
+  const bootcampWeeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+  
+  const [week, setWeek] = useState(bootcampWeeks);
+
+
+  
   const handleChange = (event) => {
     setWeek(event.target.value);
   };
@@ -11,10 +15,22 @@ function WeekDropDown() {
   return (
     <form className="weekDropDown">
       <label>Weeks</label>
-      {weeks.map((week) => {
-        <option value={week}>{week}</option>;
+    
+<select value={week} onChange={handleChange}>
+    
+      {week.map((oneWeek)=>{
+return(
+
+
+<option value={oneWeek}>{oneWeek}</option>
+
+)
+
       })}
-    </form>
+      
+       </select>
+        </form>
+  
   );
 }
 
