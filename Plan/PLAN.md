@@ -47,9 +47,9 @@ Create react APP and Express Server ✅
 
 Finalise folder structure ✅
 
-Add Environment variables for db
+Add Environment variables for db ✅
 
-Add db scripts
+Add db scripts ✅
 
 decide and create db models
 
