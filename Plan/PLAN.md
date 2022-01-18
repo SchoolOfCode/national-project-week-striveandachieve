@@ -43,11 +43,11 @@ Goal stretch to create a single signon for feature that coaches could access app
 
 Plan
 
-Create react APP and Express Server
+Create react APP and Express Server ✅
 
-Finalise folder structure
+Finalise folder structure ✅
 
-Add Enviroment varibles for db
+Add Environment variables for db
 
 Add db scripts
 
