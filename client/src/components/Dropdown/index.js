@@ -1,29 +1,29 @@
 import { useState } from "react";
 
 
-function WeekDropDown() {
-  const bootcampWeeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+function DropDownList({arrayIn}) {
   
-  const [week, setWeek] = useState(bootcampWeeks);
+  
+  const [arrayItem, setArrayItem] = useState([]);
 
 
   
-  const handleChange = (event) => {
-    setWeek(event.target.value);
-    console.log(week)
+  const handleChange = (e) => {
+    setArrayItem(e.target.value);
+    console.log(arrayItem)
   };
 
   return (
-    <form className="weekDropDown">
-      <label>Weeks</label>
+    <form className="DropDownFrom">
+      <label>{arrayIn.name}</label>
     
-<select value={week} onChange={handleChange}>
+<select value={arrayItem} onChange={handleChange}>
     
-      {bootcampWeeks.map((oneWeek)=>{
+      {arrayIn.array.map((item)=>{
 return(
 
 
-<option value={oneWeek}>{oneWeek}</option>
+<option key={item} value={item}>{item}</option>
 
 )
 
@@ -35,4 +35,4 @@ return(
   );
 }
 
-export default WeekDropDown;
+export default DropDownList;
