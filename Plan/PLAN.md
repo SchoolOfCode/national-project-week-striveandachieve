@@ -51,11 +51,11 @@ Add Environment variables for db ✅
 
 Add db scripts ✅
 
-decide and create db models
+decide and create db models ✅
 
-add db routes
+add db routes ✅
 
-create hi fidelty render 
+create hi fidelty render ✅
 
 React create components
 
