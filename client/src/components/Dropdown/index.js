@@ -10,6 +10,7 @@ function WeekDropDown() {
   
   const handleChange = (event) => {
     setWeek(event.target.value);
+    console.log(week)
   };
 
   return (
@@ -18,7 +19,7 @@ function WeekDropDown() {
     
 <select value={week} onChange={handleChange}>
     
-      {week.map((oneWeek)=>{
+      {bootcampWeeks.map((oneWeek)=>{
 return(
 
 
