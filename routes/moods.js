@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 
-import {addMood, getAllMoods} from "../models/moods.js"
+import {addMood, getAllMoods, getMoodByWeek} from "../models/moods.js"
 
 /* GET moods listing. */
 router.get("/", async function (req, res) {
