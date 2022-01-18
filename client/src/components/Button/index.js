@@ -1,1 +1,9 @@
-import { route } from "express/lib/application";
+function Button({ onClick, buttonText }) {
+  return (
+    <div>
+      <Button onClick={onClick}>{buttonText}</Button>
+    </div>
+  );
+}
+
+export default Button;
