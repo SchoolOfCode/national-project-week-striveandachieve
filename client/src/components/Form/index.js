@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
+import "./index.css";
 
 import URL from "../App";
 
@@ -47,7 +48,7 @@ function Form2() {
   return (
     <form onSubmit={handleSubmit((data) => createNewDay(data))}>
       <section className="dropDownBoxes">
-        <select {...register("week")}>
+        <select id="weekDropDown" {...register("week")}>
           <option value="">Select Week...</option>
           <option value="1">Week 1</option>
           <option value="2">Week 2</option>
@@ -67,7 +68,7 @@ function Form2() {
           <option value="16">Week 16</option>
         </select>
 
-        <select {...register("day")}>
+        <select id="dayDropDown" {...register("day")}>
           <option value="">Select Day...</option>
           <option value="1">Monday</option>
           <option value="2">Tuesday</option>
@@ -76,7 +77,7 @@ function Form2() {
           <option value="5">Friday</option>
         </select>
 
-        <select {...register("mood")}>
+        <select id="moodDropDown" {...register("mood")}>
           <option value="">Select Mood...</option>
 
           <option value="1">Good</option>
