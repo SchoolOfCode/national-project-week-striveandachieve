@@ -1,10 +1,11 @@
-import pg from 'pg';
+import pg from "pg";
+import * as config from "../config.js"
 
 const pool = new pg.Pool({
-connectionString: process.env.DATABASE_URL,
-ssl: {rejectUnauthorized: false},
+  connectionString: config.url,
+  ssl: { rejectUnauthorized: false },
 });
 
-export default function query(text,params){
-    return pool.query(text, params);
+export default function query(text, params) {
+  return pool.query(text, params);
 }
