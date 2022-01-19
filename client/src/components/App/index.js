@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "../Header";
-import Form from "../Form";
+import Form2 from "../Form2";
 import Results from "../Results";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <h1>Hello World!</h1>
       {/* <Header /> */}
-      <Form />
+      <Form2 />
       {/* <Results /> */}
     </div>
   );
