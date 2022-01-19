@@ -33,6 +33,7 @@
 }
 
 .inputbox {
+  display: grid;
 }
 
 .learning {
