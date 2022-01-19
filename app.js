@@ -8,8 +8,6 @@ import logger from "morgan";
 
 import moodsRouter from "./routes/moods.js";
 
-
-
 export const sampleData = [
   {
     userid: 1,
