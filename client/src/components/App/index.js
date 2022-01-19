@@ -1,9 +1,7 @@
 import "./App.css";
 import Header from "../Header";
 import Form from "../Form";
-import Results from "../Results";
-
-export const URL = "http://localhost:3000";
+// import Results from "../Results";
 
 function App() {
   return (

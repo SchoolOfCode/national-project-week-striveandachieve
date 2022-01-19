@@ -1,28 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useState, useEffect } from "react";
+
 import "./index.css";
 
-import URL from "../App";
+const API_URL = process.env.REACT_APP_API_URL
 
 function Form2() {
   const { register, handleSubmit } = useForm();
-  const [result, setResult] = useState("");
-
-  // useEffect(() => {
-
-  //   createNewDay({
-  //     userid: 1,
-  //     name: "Grace",
-  //     week: parseInt(result.week),
-  //     day: parseInt(result.day),
-  //     mood: parseInt(result.mood),
-  //     learned: result.learn,
-  //     revise: result.revise,
-  //     feeling: result.feeling,
-  //   });
-  // }, [result]);
-
+  
   async function createNewDay(body) {
     console.log(body);
     const user = {
@@ -40,7 +25,7 @@ function Form2() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
     };
-    const response = await fetch(`/moods`, requestOptions);
+    const response = await fetch(`${API_URL}/moods`, requestOptions);
     const data = await response.json();
     console.log(data);
   }
@@ -89,6 +74,7 @@ function Form2() {
         <div className="learning">
           <label className="label">What Did I learn?</label>
 
+
           <input
             className="inputbox"
             {...register("learn")}
@@ -110,6 +96,8 @@ function Form2() {
 
         <input type="submit" />
       </section>
+
+
     </form>
   );
 }
