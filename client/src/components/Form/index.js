@@ -1,27 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useState, useEffect } from "react";
-
-import URL from "../App";
 
 function Form2() {
   const { register, handleSubmit } = useForm();
-  const [result, setResult] = useState("");
-
-  // useEffect(() => {
-
-  //   createNewDay({
-  //     userid: 1,
-  //     name: "Grace",
-  //     week: parseInt(result.week),
-  //     day: parseInt(result.day),
-  //     mood: parseInt(result.mood),
-  //     learned: result.learn,
-  //     revise: result.revise,
-  //     feeling: result.feeling,
-  //   });
-  // }, [result]);
-
+  
   async function createNewDay(body) {
     console.log(body);
     const user = {
@@ -93,9 +75,7 @@ function Form2() {
         <input {...register("feeling")} placeholder="...... " />
       </section>
 
-      <p>{result}</p>
-
-      <input type="submit" />
+         <input type="submit" />
     </form>
   );
 }
