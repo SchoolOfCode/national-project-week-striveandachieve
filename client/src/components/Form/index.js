@@ -106,7 +106,7 @@ function Form2() {
           />
         </div>
         <div className="learning">
-          <label className="label">How am I Feeling ?</label>
+          <label className="label">How am I Feeling?</label>
           <input
             className="inputbox"
             {...register("feeling")}
