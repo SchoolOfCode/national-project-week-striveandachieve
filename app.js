@@ -8,7 +8,7 @@ import logger from "morgan";
 
 import moodsRouter from "./routes/moods.js";
 
-app.use(cors({ origin: "https://flamboyant-turing-adbfc7.netlify.app" }));
+
 
 export const sampleData = [
   {
@@ -35,6 +35,7 @@ export const sampleData = [
 
 const app = express();
 
+app.use(cors());
 app.use(logger("dev"));
 app.use(cors());
 app.use(express.json());
