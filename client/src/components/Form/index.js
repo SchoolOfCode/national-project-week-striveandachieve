@@ -86,17 +86,30 @@ function Form2() {
         </select>
       </section>
       <section className="whatINeedTodo">
-        <label>What Did I learn?</label>
-        <input {...register("learn")} placeholder="......" />
-        <label>What do I need to revise?</label>
-        <input {...register("revise")} placeholder="...... " />
-        <label>How am I Feeling ?</label>
-        <input {...register("feeling")} placeholder="...... " />
+        <div className="learning">
+          <label className="label">What Did I learn?</label>
+
+          <input
+            className="inputbox"
+            {...register("learn")}
+            placeholder="......"
+          />
+        </div>
+        <label className="label">What do I need to revise?</label>
+        <input
+          className="inputbox"
+          {...register("revise")}
+          placeholder="...... "
+        />
+        <label className="label">How am I Feeling ?</label>
+        <input
+          className="inputbox"
+          {...register("feeling")}
+          placeholder="...... "
+        />
+
+        <input type="submit" />
       </section>
-
-      <p>{result}</p>
-
-      <input type="submit" />
     </form>
   );
 }
