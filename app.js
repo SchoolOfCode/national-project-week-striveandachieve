@@ -8,10 +8,11 @@ import logger from "morgan";
 
 import moodsRouter from "./routes/moods.js";
 
-app.use(cors())
+app.use(cors({ origin: "https://flamboyant-turing-adbfc7.netlify.app" }));
 
 export const sampleData = [
-  { userid: 1,
+  {
+    userid: 1,
     name: "Grace",
     week: 1,
     day: 1,
@@ -29,7 +30,7 @@ export const sampleData = [
     revise: ".env",
     mood: 2,
     feeling: "I still am tired",
-  }
+  },
 ];
 
 const app = express();
