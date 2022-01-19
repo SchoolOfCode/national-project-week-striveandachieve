@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "../Header";
 import Form from "../Form";
-// import Results from "../Results";
+import Results from "../Results";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       {/* <h1>Hello World!</h1> */}
       <Header />
       <Form />
-      {/* <Results /> */}
+      <Results />
     </div>
   );
 }
