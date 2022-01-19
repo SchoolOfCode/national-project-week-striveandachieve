@@ -8,6 +8,10 @@ import logger from "morgan";
 
 import moodsRouter from "./routes/moods.js";
 
+const cors = require('cors');
+
+app.use(cors({origin: 'https://flamboyant-turing-adbfc7.netlify.app/'}))
+
 export const sampleData = [
   { userid: 1,
     name: "Grace",
