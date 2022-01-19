@@ -59,19 +59,17 @@ create hi fidelty render ✅
 
 React create components
 
-* Create Form
+- Create Form
 
 ```
 Inside form create 3 dropdown list
 ```
 
-
 Dropdown 1 is Weeks
 
-Dropdown 2 is  5  days mon/fri
+Dropdown 2 is 5 days mon/fri
 
 Dropdown 3 is Mood , 1 Happy , 2 OK , 3 Sad
-
 
 Create 2 inputs fields for text
 
@@ -79,18 +77,16 @@ Create 2 inputs fields for text
 1 What did we learn
 ```
 
-
 ```
 2 Topics  to revies
 ```
 
+New section containing a Grid to fit 80 boxes with lables for each week
 
+Output form
 
-New section containing  a Grid to fit 80 boxes with lables for each week
-
-
-Output form 
-
-containing  drop with weeks and a  submit button.
+containing drop with weeks and a submit button.
 
 A table/grid rows showing output data
+
+Git branch
