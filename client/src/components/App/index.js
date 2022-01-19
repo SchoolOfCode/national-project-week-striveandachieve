@@ -1,14 +1,16 @@
 import "./App.css";
 import Header from "../Header";
-import Form2 from "../Form2";
+import Form from "../Form";
 import Results from "../Results";
+
+export const URL = "http://localhost:3000";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
-      {/* <Header /> */}
-      <Form2 />
+      {/* <h1>Hello World!</h1> */}
+      <Header />
+      <Form />
       {/* <Results /> */}
     </div>
   );
