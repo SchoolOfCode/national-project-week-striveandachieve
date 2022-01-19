@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Quicksand:wght@300;500;700&display=swap");
+
+:root {
+  --blue: #2783b1;
+  --lightblue: #359fd4;
+  --white: #ffffff;
+}
+
+.title-box {
+  border: 1px red solid;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: var(--blue);
+}
+
+.logo {
+  display: block;
+  width: 70px;
+  padding: 10px;
+}

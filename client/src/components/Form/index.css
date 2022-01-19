@@ -1,0 +1,43 @@
+.dropDownBoxes {
+  border: 2px blue solid;
+  display: flex;
+  padding: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+#dayDropDown {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  background-color: var(--lightblue);
+  font-size: 20px;
+  border-color: lightgray;
+}
+
+#weekDropDown {
+  background-color: var(--lightblue);
+  font-size: 20px;
+  border-color: lightgray;
+}
+
+#moodDropDown {
+  background-color: var(--lightblue);
+  font-size: 20px;
+  border-color: lightgray;
+}
+
+.whatINeedTodo {
+}
+
+.label {
+}
+
+.inputbox {
+}
+
+.learning {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  border: 2px green solid;
+  width: 20vw;
+}
