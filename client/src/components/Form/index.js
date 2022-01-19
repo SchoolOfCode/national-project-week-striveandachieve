@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
+const API_URL = process.env.REACT_APP_API_URL
+
 function Form2() {
   const { register, handleSubmit } = useForm();
   
@@ -21,7 +23,7 @@ function Form2() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
     };
-    const response = await fetch(`/moods`, requestOptions);
+    const response = await fetch(`${API_URL}/moods`, requestOptions);
     const data = await response.json();
     console.log(data);
   }
