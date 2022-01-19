@@ -1,16 +1,15 @@
-import './App.css';
+import "./App.css";
 import Header from "../Header";
-import Form from "../Form";
+import Form2 from "../Form2";
 import Results from "../Results";
-
 
 function App() {
   return (
     <div className="App">
       <h1>Hello World!</h1>
-      <Header />
-      <Form />
-      <Results />
+      {/* <Header /> */}
+      <Form2 />
+      {/* <Results /> */}
     </div>
   );
 }
