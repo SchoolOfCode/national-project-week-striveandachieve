@@ -1,5 +1,4 @@
 .dropDownBoxes {
-  border: 2px blue solid;
   display: flex;
   padding: 10px;
   font-family: "Quicksand", sans-serif;
@@ -27,18 +26,42 @@
 }
 
 .whatINeedTodo {
+  display: flex;
+  flex: auto;
+  font-family: "Quicksand", sans-serif;
+  padding-top: 20px;
 }
 
 .label {
+  text-align: left;
 }
 
 .inputbox {
   display: grid;
+  padding: 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px var(--lightblue) solid;
 }
 
 .learning {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  border: 2px green solid;
   width: 20vw;
+  margin-left: 10px;
+}
+
+#revisebox {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.button {
+  border-radius: 60px;
+  background-color: var(--lightblue);
+  border: none;
+  margin-left: 20px;
+  width: 8vw;
+  font-family: "Quicksand", sans-serif;
+  height: 2vw;
+  margin-top: 60px;
 }
