@@ -71,7 +71,9 @@ function Form2() {
       </section>
       <section className="whatINeedTodo">
         <div className="learning">
-          <label className="label">What Did I learn?</label>
+          <label id="whatlearn" className="label">
+            What Did I learn?
+          </label>
 
 
           <input
@@ -80,20 +82,24 @@ function Form2() {
             placeholder="......"
           />
         </div>
-        <label className="label">What do I need to revise?</label>
-        <input
-          className="inputbox"
-          {...register("revise")}
-          placeholder="...... "
-        />
-        <label className="label">How am I Feeling ?</label>
-        <input
-          className="inputbox"
-          {...register("feeling")}
-          placeholder="...... "
-        />
+        <div className="learning" id="revisebox">
+          <label className="label">What do I need to revise?</label>
+          <input
+            className="inputbox"
+            {...register("revise")}
+            placeholder="...... "
+          />
+        </div>
+        <div className="learning">
+          <label className="label">How am I Feeling?</label>
+          <input
+            className="inputbox"
+            {...register("feeling")}
+            placeholder="...... "
+          />
+        </div>
 
-        <input type="submit" />
+        <input className="button" type="submit" />
       </section>
 
 
@@ -102,6 +108,8 @@ function Form2() {
 }
 
 export default Form2;
+
+
 
 
 
