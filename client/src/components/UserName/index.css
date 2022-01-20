@@ -1,0 +1,12 @@
+.userNameBox{
+
+
+margin: 0 auto;
+   
+    width: 20vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+  background-color: #359fd42f;
+}
