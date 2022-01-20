@@ -8,7 +8,8 @@
     "createtable": "node -r dotenv/config ./db/scripts/createTable.js",
     "populatetable": "node -r dotenv/config ./db/scripts/populateTable.js",
     "dev": "nodemon -r dotenv/config ./bin/www.js",
-    "deletetable": "node -r dotenv/config ./db/scripts/deleteTable.js"
+    "deletetable": "node -r dotenv/config ./db/scripts/deleteTable.js",
+    "test": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,5 +20,9 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "supertest": "^6.2.2"
   }
 }

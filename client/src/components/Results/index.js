@@ -1,33 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Table from "../Table";
-import Mood from "../Mood"
+import Mood from "../Mood";
 import "./index.css";
-
+//allows different environment variables for local and remote opertion
 const API_URL = process.env.REACT_APP_API_URL;
 
 function Results() {
   const { register, handleSubmit, resetField } = useForm();
   const [display, setDisplay] = useState([]);
   const [avgMood, setAvgMood] = useState(0);
-
-  useEffect(()=> {
-    let averageMood = []
-    display.map(calculateMood)
+  //when new data is fetched in the search the mood over selected period is averaged and saved in a state
+  useEffect(() => {
+    let averageMood = [];
+    display.map(calculateMood);
     function calculateMood(day) {
-      let mood = day.mood
-      averageMood = [...averageMood, mood]
-      return averageMood
+      let mood = day.mood;
+      averageMood = [...averageMood, mood];
+      return averageMood;
     }
     const sum = averageMood.reduce((a, b) => a + b, 0);
-    const avg = (sum / averageMood.length) || 0;
+    const avg = sum / averageMood.length || 0;
     setAvgMood(Math.round(avg));
-    }, [display]);
-
+  }, [display]);
+  //if week selection was all then it does fetch request with no query. Otherwise it will do a query with a week
   async function displayResultByWeek(selection) {
     resetField("week");
     if (selection.week === "All") {
-      console.log("week selection was ALL")
+      console.log("week selection was ALL");
       const response = await fetch(`${API_URL}/moods`);
       const data = await response.json();
       console.log(data);
@@ -81,10 +81,9 @@ function Results() {
         </section>
       </form>
 
-      <Mood average={avgMood}/>
+      <Mood average={avgMood} />
       <Table display={display} />
-      </div>
-
+    </div>
   );
 }
 

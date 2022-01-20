@@ -3,6 +3,7 @@ import Row from "../Row";
 import "./index.css";
 
 export default function Table({ display }) {
+  //if not data is fetched then nothing is displayed
   if (display[0]) {
     return (
       <table>
@@ -17,6 +18,7 @@ export default function Table({ display }) {
           </tr>
         </thead>
         <tbody>
+          {/* mapping through each line of the database */}
           {display.map((day, index) => {
             return <Row key={index} text={day} />;
           })}

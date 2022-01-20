@@ -1,6 +1,7 @@
 import pg from "pg";
-import * as config from "../config.js"
+import * as config from "../config.js";
 
+//connection string comes from heroku. Environment variable DATABASE_URL
 const pool = new pg.Pool({
   connectionString: config.url,
   ssl: { rejectUnauthorized: false },
