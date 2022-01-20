@@ -17,17 +17,25 @@ table {
   padding: 2em 0em 0em 1em;
 }
 
-.mood3 {
-  background-color: #ff7070;
+.mood5 {
+  background-color:  hsl(92, 66%, 70%);
 }
 
-.mood2 {
+.mood4 {
+  background-color: hsl(85, 66%, 82%);
+}
+
+.mood3 {
   background-color: #ffb05c;
 }
 
-.mood1 {
+.mood2 {
+  background-color: hsl(5, 100%, 80%);
+}
 
-  background-color:  #bfea9a;
+.mood1 {
+ 
+  background-color: hsl(0, 100%, 68%);
 }
 
 #averageMood {
