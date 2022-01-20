@@ -38,7 +38,7 @@ function Form2() {
   return (
     <form onSubmit={handleSubmit((data) => createNewDay(data))}>
       <section className="dropDownBoxes">
-        <select id="weekDropDown" {...register("week", { required: true })}>
+        <select id="weekDropDown" className="DropDown" {...register("week", { required: true })}>
           <option value="">Select Week...</option>
           <option value="1">Week 1</option>
           <option value="2">Week 2</option>
@@ -58,7 +58,7 @@ function Form2() {
           <option value="16">Week 16</option>
         </select>
 
-        <select id="dayDropDown" {...register("day", { required: true })}>
+        <select id="dayDropDown" className="DropDown" {...register("day", { required: true })}>
           <option value="">Select Day...</option>
           <option value="1">Monday</option>
           <option value="2">Tuesday</option>
@@ -67,7 +67,7 @@ function Form2() {
           <option value="5">Friday</option>
         </select>
 
-        <select id="moodDropDown" {...register("mood", { required: true })}>
+        <select id="moodDropDown" className="DropDown" {...register("mood", { required: true })}>
           <option value="">Select Mood...</option>
 
           <option value="1">Good</option>

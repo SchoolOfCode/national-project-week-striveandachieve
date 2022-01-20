@@ -8,18 +8,9 @@
   margin-left: 20px;
   margin-right: 20px;
   padding: 10px;
-  background-color: var(--lightblue);
-  font-size: 20px;
-  border-color: lightgray;
-}
+ }
 
-#weekDropDown {
-  background-color: var(--lightblue);
-  font-size: 20px;
-  border-color: lightgray;
-}
-
-#moodDropDown {
+.DropDown {
   background-color: var(--lightblue);
   font-size: 20px;
   border-color: lightgray;

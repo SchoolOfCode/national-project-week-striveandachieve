@@ -1,0 +1,26 @@
+.searchbutton {
+    border-radius: 60px;
+    background-color: var(--lightblue);
+    border: none;
+    margin-left: 20px;
+    width: 8vw;
+    font-family: "Quicksand", sans-serif;
+    height: 2vw;
+    margin-top: 1em;
+  }
+  
+table {
+  padding: 2em 0em 0em 1em;
+}
+
+.mood3 {
+  background-color: red;
+}
+
+.mood2 {
+  background-color: orange;
+}
+
+.mood1 {
+  background-color:limegreen
+}
