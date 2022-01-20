@@ -22,5 +22,5 @@ export default function Table({ display }) {
       </tbody>
     </table>;
   }
-  return <p>Search for results by week</p>;
+  return <></>;
 }

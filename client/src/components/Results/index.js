@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import Table from "../Table";
 import "./index.css";
 
-
 const API_URL = process.env.REACT_APP_API_URL;
 
 function Results() {
@@ -12,11 +11,19 @@ function Results() {
 
   async function displayResultByWeek(selection) {
     resetField("week");
-    const week = parseInt(selection.week);
-    const response = await fetch(`${API_URL}/moods?week=${week}`);
-    const data = await response.json();
-    console.log(data);
-    resultsDisplay(data);
+    if (selection.week === "All") {
+      console.log("week selection was ALL")
+      const response = await fetch(`${API_URL}/moods`);
+      const data = await response.json();
+      console.log(data);
+      resultsDisplay(data);
+    } else {
+      const week = parseInt(selection.week);
+      const response = await fetch(`${API_URL}/moods?week=${week}`);
+      const data = await response.json();
+      console.log(data);
+      resultsDisplay(data);
+    }
   }
 
   function resultsDisplay({ payload }) {
@@ -27,7 +34,11 @@ function Results() {
     <div className="resultsbox">
       <form onSubmit={handleSubmit((data) => displayResultByWeek(data))}>
         <section className="dropDownBoxes">
-          <select id="searchweek" className="DropDown" {...register("week", { required: true })}>
+          <select
+            id="searchweek"
+            className="DropDown"
+            {...register("week", { required: true })}
+          >
             <option value="">Select Week...</option>
             <option value="1">Week 1</option>
             <option value="2">Week 2</option>
@@ -45,11 +56,16 @@ function Results() {
             <option value="14">Week 14</option>
             <option value="15">Week 15</option>
             <option value="16">Week 16</option>
+            <option value="All">All Weeks</option>
           </select>
-          <input className="searchbutton" type="submit" />
+          <input
+            className="searchbutton"
+            type="submit"
+            value="Search Entries"
+          />
         </section>
       </form>
-      <Table display={display}/>
+      <Table display={display} />
     </div>
   );
 }
