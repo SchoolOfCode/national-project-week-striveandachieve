@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Table from "../Table";
+import Mood from "../Mood"
 import "./index.css";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -8,6 +9,20 @@ const API_URL = process.env.REACT_APP_API_URL;
 function Results() {
   const { register, handleSubmit, resetField } = useForm();
   const [display, setDisplay] = useState([]);
+  const [avgMood, setAvgMood] = useState(0);
+
+  useEffect(()=> {
+    let averageMood = []
+    display.map(calculateMood)
+    function calculateMood(day) {
+      let mood = day.mood
+      averageMood = [...averageMood, mood]
+      return averageMood
+    }
+    const sum = averageMood.reduce((a, b) => a + b, 0);
+    const avg = (sum / averageMood.length) || 0;
+    setAvgMood(Math.round(avg));
+    }, [display]);
 
   async function displayResultByWeek(selection) {
     resetField("week");
@@ -65,8 +80,9 @@ function Results() {
           />
         </section>
       </form>
+      <Mood average={avgMood}/>
       <Table display={display} />
-    </div>
+      </div>
   );
 }
 

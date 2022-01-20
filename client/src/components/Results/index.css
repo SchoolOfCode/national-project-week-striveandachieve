@@ -25,3 +25,14 @@ table {
 .mood1 {
   background-color: limegreen;
 }
+
+#averageMood {
+  margin-top: 1em;
+  font-size: large;
+  font-weight: bold;
+  max-width: 50%;
+}
+
+ul {
+  text-align: left;
+}
