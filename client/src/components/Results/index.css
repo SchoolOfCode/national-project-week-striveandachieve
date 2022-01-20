@@ -1,26 +1,42 @@
 .searchbutton {
-    border-radius: 60px;
-    background-color: var(--lightblue);
-    border: none;
-    margin-left: 20px;
-    width: 8vw;
-    font-family: "Quicksand", sans-serif;
-    height: 2vw;
-    margin-top: 1em;
-  }
-  
+  border-radius: 60px;
+  background-color: var(--lightblue);
+  border: none;
+  margin-left: 20px;
+
+  width: auto;
+  font-family: "Quicksand", sans-serif;
+  height: 2vw;
+  margin-top: 1em;
+  padding: 0em 1em 0em 1em;
+  cursor: pointer;
+
+}
+
 table {
   padding: 2em 0em 0em 1em;
 }
 
 .mood3 {
-  background-color: red;
+  background-color: #ff7070;
 }
 
 .mood2 {
-  background-color: orange;
+  background-color: #ffb05c;
 }
 
 .mood1 {
-  background-color:limegreen
+
+  background-color:  #bfea9a;
+}
+
+#averageMood {
+  margin-top: 1em;
+  font-size: large;
+  font-weight: bold;
+  max-width: 50%;
+}
+
+ul {
+  text-align: left;
 }
