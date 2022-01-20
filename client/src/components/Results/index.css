@@ -3,11 +3,14 @@
   background-color: var(--lightblue);
   border: none;
   margin-left: 20px;
+
   width: auto;
   font-family: "Quicksand", sans-serif;
   height: 2vw;
   margin-top: 1em;
   padding: 0em 1em 0em 1em;
+  cursor: pointer;
+
 }
 
 table {
@@ -15,15 +18,16 @@ table {
 }
 
 .mood3 {
-  background-color: red;
+  background-color: #ff7070;
 }
 
 .mood2 {
-  background-color: orange;
+  background-color: #ffb05c;
 }
 
 .mood1 {
-  background-color: limegreen;
+
+  background-color:  #bfea9a;
 }
 
 #averageMood {

@@ -80,9 +80,11 @@ function Results() {
           />
         </section>
       </form>
+
       <Mood average={avgMood}/>
       <Table display={display} />
       </div>
+
   );
 }
 
