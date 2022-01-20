@@ -17,6 +17,7 @@ table {
   border: 1px var(--lightblue) solid;
 }
 
+
 th {
   background-color: rgb(245, 245, 245);
 }
@@ -27,3 +28,4 @@ p {
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
 }
+

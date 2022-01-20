@@ -3,11 +3,14 @@
   background-color: var(--lightblue);
   border: none;
   margin-left: 20px;
-  max-width: 6%;
+
+  width: auto;
   font-family: "Quicksand", sans-serif;
   height: 2vw;
   margin-top: 1em;
+  padding: 0em 1em 0em 1em;
   cursor: pointer;
+
 }
 
 table {
@@ -23,5 +26,17 @@ table {
 }
 
 .mood1 {
-  background-color: #bfea9a;
+
+  background-color:  #bfea9a;
+}
+
+#averageMood {
+  margin-top: 1em;
+  font-size: large;
+  font-weight: bold;
+  max-width: 50%;
+}
+
+ul {
+  text-align: left;
 }

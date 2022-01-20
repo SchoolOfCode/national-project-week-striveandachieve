@@ -78,7 +78,7 @@ function Form2() {
       <section className="whatINeedTodo">
         <div className="learning">
           <label id="whatlearn" className="label">
-            What Did I learn?
+            What did I learn?
           </label>
 
           <input
@@ -96,7 +96,7 @@ function Form2() {
           />
         </div>
         <div className="learning">
-          <label className="label">How am I Feeling?</label>
+          <label className="label">How am I feeling?</label>
           <input
             className="inputbox"
             {...register("feeling", { required: true })}
