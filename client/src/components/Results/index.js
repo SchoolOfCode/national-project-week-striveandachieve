@@ -21,7 +21,7 @@ function Results() {
     }
     const sum = averageMood.reduce((a, b) => a + b, 0);
     const avg = (sum / averageMood.length) || 0;
-    setAvgMood(Math.floor(avg));
+    setAvgMood(Math.round(avg));
     }, [display]);
 
   async function displayResultByWeek(selection) {
