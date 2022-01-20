@@ -1,4 +1,15 @@
+// import {useState} from 'react';
+
 function Row({ text }) {
+//   const [averageMood, setAverageMood] = useState([])
+
+// function updateAverageMood(mood){
+//   setAverageMood([...averageMood, mood]) 
+//   console.log (averageMood)
+// };
+
+// updateAverageMood(text.mood);
+
   let moodClass = `mood${text.mood}`
   let mood = ""
    if (text.mood === 1){
@@ -8,6 +19,7 @@ function Row({ text }) {
   } else if (text.mood === 3) {
     mood = "Bad"
   }
+ 
   return (
     <tr>
       <td>{text.week}</td>

@@ -2,6 +2,7 @@ import Row from "../Row";
 import "./index.css";
 
 export default function Table({ display }) {
+
   if (display[0]) {
     return <table>
     <thead>
