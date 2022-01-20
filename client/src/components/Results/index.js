@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import Table from "../Table";
 import "./index.css";
 
-
 const API_URL = process.env.REACT_APP_API_URL;
 
 function Results() {
@@ -27,7 +26,11 @@ function Results() {
     <div className="resultsbox">
       <form onSubmit={handleSubmit((data) => displayResultByWeek(data))}>
         <section className="dropDownBoxes">
-          <select id="searchweek" className="DropDown" {...register("week", { required: true })}>
+          <select
+            id="searchweek"
+            className="DropDown"
+            {...register("week", { required: true })}
+          >
             <option value="">Select Week...</option>
             <option value="1">Week 1</option>
             <option value="2">Week 2</option>
@@ -49,7 +52,7 @@ function Results() {
           <input className="searchbutton" type="submit" />
         </section>
       </form>
-      <Table display={display}/>
+      <Table display={display} />
     </div>
   );
 }

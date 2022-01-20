@@ -8,7 +8,7 @@
   margin-left: 20px;
   margin-right: 20px;
   padding: 10px;
- }
+}
 
 .DropDown {
   background-color: var(--lightblue);
@@ -53,8 +53,14 @@
   background-color: var(--lightblue);
   border: none;
   margin-left: 20px;
-  width: 8vw;
+  max-width: 8vw;
   font-family: "Quicksand", sans-serif;
   height: 2vw;
   margin-top: 60px;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .DropDown {
+    background-color: red;
+  }
 }
