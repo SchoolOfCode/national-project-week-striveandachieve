@@ -3,10 +3,11 @@
   background-color: var(--lightblue);
   border: none;
   margin-left: 20px;
-  width: 8vw;
+  max-width: 6%;
   font-family: "Quicksand", sans-serif;
   height: 2vw;
   margin-top: 1em;
+  cursor: pointer;
 }
 
 table {
