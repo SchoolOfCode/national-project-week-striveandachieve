@@ -2,13 +2,19 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./index.css";
 
-const API_URL = process.env.REACT_APP_API_URL
+const API_URL = process.env.REACT_APP_API_URL;
 
 function Form2() {
-  const { register, handleSubmit } = useForm();
-  
+  const { register, handleSubmit, resetField } = useForm();
+
   async function createNewDay(body) {
     console.log(body);
+    resetField('week');
+    resetField('day');
+    resetField('mood');
+    resetField('learn');
+    resetField('revise');
+    resetField('feeling');
     const user = {
       userid: 1,
       name: "Grace",
@@ -32,7 +38,7 @@ function Form2() {
   return (
     <form onSubmit={handleSubmit((data) => createNewDay(data))}>
       <section className="dropDownBoxes">
-        <select id="weekDropDown" {...register("week")}>
+        <select id="weekDropDown" className="DropDown" {...register("week", { required: true })}>
           <option value="">Select Week...</option>
           <option value="1">Week 1</option>
           <option value="2">Week 2</option>
@@ -52,7 +58,7 @@ function Form2() {
           <option value="16">Week 16</option>
         </select>
 
-        <select id="dayDropDown" {...register("day")}>
+        <select id="dayDropDown" className="DropDown" {...register("day", { required: true })}>
           <option value="">Select Day...</option>
           <option value="1">Monday</option>
           <option value="2">Tuesday</option>
@@ -61,7 +67,7 @@ function Form2() {
           <option value="5">Friday</option>
         </select>
 
-        <select id="moodDropDown" {...register("mood")}>
+        <select id="moodDropDown" className="DropDown" {...register("mood", { required: true })}>
           <option value="">Select Mood...</option>
 
           <option value="1">Good</option>
@@ -75,10 +81,9 @@ function Form2() {
             What Did I learn?
           </label>
 
-
           <input
             className="inputbox"
-            {...register("learn")}
+            {...register("learn", { required: true })}
             placeholder="......"
           />
         </div>
@@ -86,7 +91,7 @@ function Form2() {
           <label className="label">What do I need to revise?</label>
           <input
             className="inputbox"
-            {...register("revise")}
+            {...register("revise", { required: true })}
             placeholder="...... "
           />
         </div>
@@ -94,23 +99,15 @@ function Form2() {
           <label className="label">How am I Feeling?</label>
           <input
             className="inputbox"
-            {...register("feeling")}
+            {...register("feeling", { required: true })}
             placeholder="...... "
           />
         </div>
 
         <input className="button" type="submit" />
       </section>
-
-
     </form>
   );
 }
 
 export default Form2;
-
-
-
-
-
-
