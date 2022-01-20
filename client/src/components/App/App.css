@@ -7,3 +7,10 @@
 
   border:1px solid greenyellow
 }
+
+hr {
+  border-color: #359fd42f;
+  border-width: 1px;
+  width: 80%;
+  margin-top: 3em;
+}
