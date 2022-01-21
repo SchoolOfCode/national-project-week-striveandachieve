@@ -57,9 +57,9 @@ add db routes ✅
 
 create hi fidelty render ✅
 
-React create components
+React create components ✅
 
-- Create Form
+- Create Form ✅
 
 ```
 Inside form create 3 dropdown list
@@ -81,12 +81,23 @@ Create 2 inputs fields for text
 2 Topics  to revies
 ```
 
-New section containing a Grid to fit 80 boxes with lables for each week
-
-Output form
+Output form ✅
 
 containing drop with weeks and a submit button.
 
 A table/grid rows showing output data
 
-Git branch
+Add CSS ✅
+
+
+----
+STRETCH GOALS
+----
+
+* Mobile responsive
+* Delete button for selected lines of table
+* Multi-user (OAuth?)
+* Way of marking progress on revision topics; router for another page display?
+* Multiple tables
+* Change dropdown menu for mood to be a dynamic smiley face
+* Dashboard for coaches to view anonymous overall mood by Week/Day

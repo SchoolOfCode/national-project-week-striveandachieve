@@ -11,7 +11,7 @@ th {
 
 table {
   width: 90%;
-  margin-left: 10px;
+  margin: 1em 0 0 1em;
   border-collapse: collapse;
   font-family: "Quicksand", sans-serif;
   border: 1px var(--lightblue) solid;
@@ -20,12 +20,5 @@ table {
 
 th {
   background-color: rgb(245, 245, 245);
-}
-
-p {
-  text-align: left;
-  padding: 10px;
-  font-family: "Quicksand", sans-serif;
-  font-size: 20px;
 }
 

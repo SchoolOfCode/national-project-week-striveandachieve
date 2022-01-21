@@ -1,25 +1,19 @@
-// import {useState} from 'react';
-
+//converting mood number into string for frontend display.  Using mood number to set a class for conditional formatting
 function Row({ text }) {
-//   const [averageMood, setAverageMood] = useState([])
-
-// function updateAverageMood(mood){
-//   setAverageMood([...averageMood, mood]) 
-//   console.log (averageMood)
-// };
-
-// updateAverageMood(text.mood);
-
-  let moodClass = `mood${text.mood}`
-  let mood = ""
-   if (text.mood === 1){
-    mood = "Good"
+  let moodClass = `mood${text.mood}`;
+  let mood = "";
+  if (text.mood === 1) {
+    mood = "Bad";
   } else if (text.mood === 2) {
-    mood = "Average"
+    mood = "Not good";
   } else if (text.mood === 3) {
-    mood = "Bad"
+    mood = "Okay";
+  } else if (text.mood === 4) {
+    mood = "Pretty good";
+  } else if (text.mood === 5) {
+    mood = "Great";
   }
- 
+
   return (
     <tr>
       <td>{text.week}</td>

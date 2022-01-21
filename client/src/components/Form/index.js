@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./index.css";
-
+//environment variables for remote and local application operation
 const API_URL = process.env.REACT_APP_API_URL;
 
 function Form2() {
@@ -9,12 +9,14 @@ function Form2() {
 
   async function createNewDay(body) {
     console.log(body);
-    resetField('week');
-    resetField('day');
-    resetField('mood');
-    resetField('learn');
-    resetField('revise');
-    resetField('feeling');
+    //clear all the fields after the form is submitted
+    resetField("week");
+    resetField("day");
+    resetField("mood");
+    resetField("learn");
+    resetField("revise");
+    resetField("feeling");
+    //converting week, day and mood into integers from string
     const user = {
       userid: 1,
       name: "Grace",
@@ -38,7 +40,11 @@ function Form2() {
   return (
     <form onSubmit={handleSubmit((data) => createNewDay(data))}>
       <section className="dropDownBoxes">
-        <select id="weekDropDown" className="DropDown" {...register("week", { required: true })}>
+        <select
+          id="weekDropDown"
+          className="DropDown"
+          {...register("week", { required: true })}
+        >
           <option value="">Select Week...</option>
           <option value="1">Week 1</option>
           <option value="2">Week 2</option>
@@ -58,7 +64,11 @@ function Form2() {
           <option value="16">Week 16</option>
         </select>
 
-        <select id="dayDropDown" className="DropDown" {...register("day", { required: true })}>
+        <select
+          id="dayDropDown"
+          className="DropDown"
+          {...register("day", { required: true })}
+        >
           <option value="">Select Day...</option>
           <option value="1">Monday</option>
           <option value="2">Tuesday</option>
@@ -67,12 +77,18 @@ function Form2() {
           <option value="5">Friday</option>
         </select>
 
-        <select id="moodDropDown" className="DropDown" {...register("mood", { required: true })}>
+        <select
+          id="moodDropDown"
+          className="DropDown"
+          {...register("mood", { required: true })}
+        >
           <option value="">Select Mood...</option>
 
-          <option value="1">Good</option>
-          <option value="2">Average</option>
-          <option value="3">Bad</option>
+          <option value="1">Bad</option>
+          <option value="2">Not good</option>
+          <option value="3">Okay</option>
+          <option value="4">Pretty good</option>
+          <option value="5">Great</option>
         </select>
       </section>
       <section className="whatINeedTodo">

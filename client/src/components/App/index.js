@@ -11,6 +11,7 @@ function App() {
       <Header />
       <UserNameField/>
       <Form />
+      <hr />
       <Results />
     </div>
   );
