@@ -68,8 +68,8 @@
 ## Things we would do differently
 
 * Disney ideation
-* More user research and checking in during developement with the users
-* Split into seperate repos
+* More user research and checking in during development with the users
+* Split into separate repos
 * Test earlier
 * Develop for mobile first - easier to scale up than down
 
