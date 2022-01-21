@@ -84,9 +84,11 @@ function Form2() {
         >
           <option value="">Select Mood...</option>
 
-          <option value="1">Good</option>
-          <option value="2">Average</option>
-          <option value="3">Bad</option>
+          <option value="1">Bad</option>
+          <option value="2">Not good</option>
+          <option value="3">Okay</option>
+          <option value="4">Pretty good</option>
+          <option value="5">Great</option>
         </select>
       </section>
       <section className="whatINeedTodo">

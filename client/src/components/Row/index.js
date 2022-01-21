@@ -3,11 +3,15 @@ function Row({ text }) {
   let moodClass = `mood${text.mood}`;
   let mood = "";
   if (text.mood === 1) {
-    mood = "Good";
-  } else if (text.mood === 2) {
-    mood = "Average";
-  } else if (text.mood === 3) {
     mood = "Bad";
+  } else if (text.mood === 2) {
+    mood = "Not good";
+  } else if (text.mood === 3) {
+    mood = "Okay";
+  } else if (text.mood === 4) {
+    mood = "Pretty good";
+  } else if (text.mood === 5) {
+    mood = "Great";
   }
 
   return (

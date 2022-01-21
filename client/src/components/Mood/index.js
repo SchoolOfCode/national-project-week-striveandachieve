@@ -3,23 +3,28 @@ function Mood({ average }) {
   let moodClass = `mood${average}`;
   let mood = "";
   if (average === 1) {
-    mood = "Good";
-  } else if (average === 2) {
-    mood = "Average";
-  } else if (average === 3) {
     mood = "Bad";
+  } else if (average === 2) {
+    mood = "Not good";
+  } else if (average === 3) {
+    mood = "Okay";
+  } else if (average === 4) {
+    mood = "Pretty good";
+  } else if (average === 5) {
+    mood = "Great";
   }
+
   //varying display depending on the value of the average mood
   console.log(average);
   if (average === 0) {
     return <></>;
-  } else if (average === 1 || average === 2) {
+  } else if (average === 5 || average === 4 || average === 3) {
     return (
       <div id="averageMood" className={moodClass}>
         Overall Mood for selected time is {mood}
       </div>
     );
-  } else if (average === 3) {
+  } else if (average === 2 || average === 1) {
     return (
       <div>
         <div id="averageMood" className={moodClass}>
